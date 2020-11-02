@@ -81,21 +81,26 @@ const productList = [
   console.log(expensiveProduct);
   
   // TASK 03
-  // let cssStyles = [
-  //   {
-  //     color: 'red'
-  //   },{
-  //     'font-size': 24
-  //   },{
-  //     'text-alight': 'center'
-  //   }
-  // ];
+
+  let cssStyles = [
+    {
+      name: 'color', value: 'red'
+    },{
+      name: 'font-size', value: '24'
+    },{
+      name: 'text-alight', value: 'center'
+    }
+  ];
+
+  const text = `I learn Java Script`;
+
+  let styleText = (cssStyles, text) => {
+    document.write('<p style = " ');
+    for (let i in cssStyles) {
+      document.write(cssStyles[i].name + ":" + cssStyles[i].value + ";");
+    }
+    document.write('">' + text + "</p>");
+  };
+  styleText(cssStyles, text);
   
-  // for (let i = 0; i < cssStyles.lenght; i++) {
-  //   document.write (`<p><style>${cssStyles[i].color};
-  //     ${cssStyles[i]['font-size']}; ${cssStyles[i]['text-alight']}</style>I learn Java Script</p>`);
-  //     let i = 0;
-  //     while (i < cssStyles.lenght) {
-  //       i++
-  //     }
-  // }
+  
